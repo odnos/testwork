@@ -133,6 +133,7 @@ module.exports = function(grunt) {
   // DEFAULT TASK
   grunt.registerTask('default', ['clean', 'pug', 'less', 'copy', 'uglify', 'browserSync', 'watch']);
 
-  // DEFAULT img optimization
-  grunt.registerTask('img', ['imagemin']);
+  // BUILD TASK
+  grunt.registerTask('build', ['clean', 'pug', 'less', 'copy', 'uglify', 'imagemin']);
+
 };
