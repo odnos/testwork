@@ -1,0 +1,388 @@
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+
+  @media (min-width: 1921px) {
+    box-shadow: 0 0 15px rgba(0, 0, 0, .05);
+  }
+}
+
+
+// knowledge
+.knowledge {
+  display: flex;
+  justify-content: center;
+}
+
+.knowledge__leftside {
+  box-sizing: border-box;
+  flex: 1 0 10px;
+  background-color: #fefdfe;
+  border-bottom: 1px solid #d2cad5;
+}
+
+.knowledge__rightside {
+  box-sizing: border-box;
+  flex: 1 0 10px;
+  border-bottom: 1px solid #d2cad5;
+}
+
+.knowledge__center {
+  flex: 1 1 1180px;
+  max-width: 1180px;
+
+  @media (min-width: 640px) {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+  }
+}
+
+.knowledge__blocks {
+  box-sizing: border-box;
+
+  @media (min-width: 640px) {
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+
+  @media (min-width: 960px) {
+    flex: 1 1 33.33333333333333%;
+    max-width: 33.33333333333333%;
+  }
+}
+
+.knowledge__blocks:nth-child(1),
+.knowledge__blocks:nth-child(9) {
+  @media (min-width: 640px) {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  @media (min-width: 960px) {
+    flex: 1 1 66.66666666666667%;
+    max-width: 66.66666666666667%;
+  }
+}
+
+.knowledge__blocks:nth-child(2),
+.knowledge__blocks:nth-child(10) {
+  display: none;
+
+  @media (min-width: 960px) {
+    display: block;
+  }
+}
+
+// lecture
+.lecture {
+  box-sizing: border-box;
+  padding: 70px 20px;
+  width: 100%;
+  color: #fff;
+
+  @media (min-width: 640px) {
+    width: 50%;
+    float: right;
+    padding: 70px 45px;
+  }
+}
+
+.lecture__title {
+  margin: 0 0 30px 0;
+  font: 600 36px/38px @pn;
+
+  @media (min-width: 960px) {
+    font-size: 48px;
+    line-height: 50px;
+  }
+}
+
+.lecture__item {
+  font: 400 18px/22px @pn;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: 960px) {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    background: url(../images/icon-yoga.png) center center no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    margin-right: 15px;
+    flex: 0 0 75px;
+
+    @media (min-width: 960px) {
+      width: 125px;
+      height: 125px;
+      margin-right: 45px;
+      flex: 0 0 125px;
+    }
+  }
+
+  &:nth-of-type(1n+2) {
+    margin-top: 30px;
+  }
+}
+
+.lecture__item--yoga:before {
+  background: url(../images/icon-india.png) center center no-repeat;
+  background-size: contain;
+}
+
+.lecture__item--body:before {
+  background: url(../images/icon-lecture.png) center center no-repeat;
+  background-size: contain;
+}
+
+
+// intensive
+.intensive {
+  display: flex;
+}
+
+.intensive__left,
+.intensive__right {
+  flex: 1 0 10px;
+  background-image: linear-gradient(to bottom, #dfdbe6 0%, #dfdbe6 510px, #f3ebf5 510px, #f3ebf5 100%);
+
+  @media (min-width: 960px) {
+    background-image: none;
+    background-color: #dfdbe6;
+  }
+}
+
+.intensive__right {
+  @media (min-width: 960px) {
+    background-image: none;
+    background-color: #f3ebf5;
+  }
+}
+
+.intensive__center {
+  flex: 1 1 1180px;
+  max-width: 1180px;
+
+  @media (min-width: 960px) {
+    display: flex;
+  }
+
+}
+
+.intensive__mentors {
+  background-color: #dfdbe6;
+  flex: 0 0 260px;
+  min-height: 510px;
+  position: relative;
+}
+
+.intensive__pict {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  bottom: -24px;
+  left: 0;
+  right: 0;
+}
+
+.intensive__content {
+  box-sizing: border-box;
+  font: 400 18px/24px "PN", sans-serif;
+  color: @primary;
+  flex: 1 1 0%;
+  background-color: #f3ebf5;
+  padding: 70px 20px;
+
+  @media (min-width: 960px) {
+    padding: 70px 0 45px 45px;
+  }
+}
+
+.intensive__title {
+  margin: 0 0 30px 0;
+  font-size: 36px;
+  line-height: 38px;
+  font-weight: 600;
+
+  @media (min-width: 960px) {
+    font-size: 48px;
+    line-height: 50px;
+  }
+}
+
+.intensive__subtitle {
+  font-size: 28px;
+  line-height: 32px;
+  margin: 0 0 30px 0;
+}
+
+.intensive__descr {
+  margin: 0 0 30px 0;
+}
+
+.intensive__hr {
+  color: @emphasis;
+  margin: 0 0 30px 0;
+}
+
+.intensive__block {
+  @media (min-width: 640px) {
+    display: flex;
+  }
+}
+
+// Сетка для времени проведения
+.intensive__item {
+  &:nth-of-type(1n+2) {
+    margin-top: 30px;
+  }
+
+  @media (min-width: 640px) {
+    flex: 1 1 0%;
+
+    &:nth-of-type(1n+2) {
+      margin-top: 0;
+      margin-left: 30px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    &:nth-of-type(1n+2) {
+      margin-left: 30px;
+    }
+  }
+}
+
+.intensive__btn {
+  margin-top: 30px;
+}
+
+// footer
+.footer {
+  font: 400 16px/15px @pn;
+  color: #fff;
+  text-align: center;
+
+  @media (min-width: 640px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.footer__privacy {
+  text-decoration: none;
+  border-bottom: 1px solid #968391;
+  color: #fff;
+}
+
+// Pushy
+.pushy {
+  background: @primary;
+}
+
+.pushy-link {
+  list-style-type: none;
+
+}
+
+.pushy ul {
+  margin: 0;
+  padding: 0;
+}
+
+.pushy a {
+  color: #b3b3b1;
+  padding: 15px 15px;
+}
+
+// fancybox
+.fancybox-content {
+     padding: 0; 
+  }
+
+// header2
+.head {
+  display: flex;
+}
+
+.head__l {
+  flex: 1 1 0%;
+}
+
+.head__r {
+  flex: 0 1 auto;
+}
+
+.logo {
+  width: 150px;
+  display: block;
+
+  @media (min-width: 640px) {
+    width: 200px;
+  }
+
+  @media (min-width: 960px) {
+    width: 347px;
+    margin-left: 60px;
+  }
+}
+
+.logo img {
+  display: block;
+  max-width: 100%;
+}
+
+.head__s {
+  margin-top: 30px;
+  font: 700 24px/24px @pn;
+  text-transform: uppercase;
+  color: @primary;
+
+  @media (min-width: 960px) {
+    font-size: 44px;
+    line-height: 48px;
+  }
+}
+
+.head__s span {
+  font-size: 70px;
+  line-height: 64px;
+  font-weight: 800;
+
+  @media (min-width: 960px) {
+    font-size: 109px;
+    line-height: 93px;
+  }
+}
+
+.head__v {
+  margin-top: 30px;
+  display: block;
+}
+
+.head__v img {
+  width: 50px;
+
+  @media (min-width: 960px) {
+    width: 118px;
+    position: relative;
+    left: 60px;
+  }
+}
+
+.head__m {
+  display: flex;
+  justify-content: flex-end;
+  @media (min-width: 960px) {
+     display: none;
+  }
+}

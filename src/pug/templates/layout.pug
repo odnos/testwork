@@ -1,0 +1,52 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    block title
+      title Дефолт
+    link(rel="stylesheet", href="css/styles.css")
+  body
+    //- Мобильное меню Pushy
+    nav.pushy.pushy-right
+      .pushy-content
+        ul
+          li.pushy-link
+            a.con.con--py(href="tel: 88001001746") 8-800-100-17-46
+          li.pushy-link
+            a.con.con--py(href="mailto: Lectorium@synergy.ru") Lectorium@synergy.ru
+          li.pushy-link 
+           a.con.con--py(href="https://yandex.ru/maps/-/CBBwrFX-DD" target="_blank") м. Семеновская <br> Москва, Измайловский Вал, дом 2, корпус 1
+    //- Site Overlay
+    .site-overlay
+
+    //- Центровщик с тенью
+    .wrapper
+      //- Секции
+      include ../includes/header
+      include ../includes/knowledge
+      include ../includes/lecture
+      include ../includes/intensive
+      include ../includes/footer
+    //- FancyBox  
+    #hidden-content(style="display: none;")
+      //- Форма
+      form.form(autocomplete="off" method="POST" action="/")
+        p.form__t Записаться 
+          span на практическую лекцию
+        input.form__i(type="text" name="name" maxlength="20" placeholder="Введите ваше имя")
+        input.form__i(type="tel" name="phone" maxlength="20" placeholder="Введите ваш телефон")
+        input.form__i(type="email" name="email" maxlength="20" placeholder="Введите ваш e-mail")
+        //- Чекбокс
+        label.form__la(for="news-modal") 
+          input.form__ch(type="checkbox" id="news-modal" name="lect" checked="checked")
+          span.form__sp
+          | Согласен получать новости <br> о звездных лекциях и курсах
+
+        //- Сабмит
+        input.button.button--h1(type="submit" name="submit" value="Отправить заявку")
+        .btn__i Количество мест ограничено: 200
+      
+
+    //- Скрипты
+    script(src="js/scripts.js")

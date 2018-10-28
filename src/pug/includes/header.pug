@@ -1,0 +1,67 @@
+.section.section--header
+  .container
+    .head
+      //- Левая часть
+      .head__l
+        //- Лого
+        a.logo(href="/")
+          img(src="images/logo.png")
+        //- Дата
+        .date.date--m1
+          .date__d 11
+          .date__i
+            .date__m Ноября
+            .date__t в 19:00
+        //- Слоган
+        .head__s
+          span Бхригу <br> йога <br>
+          | Вдохновение <br> на перемены 
+        //- Youtube
+        a.head__v(data-fancybox href="https://youtu.be/VDQQci7cnKE")
+          img(src="images/video-button.png", alt="Видео")
+        //- Кнопка на моб
+        a.button.button--hm(data-fancybox data-src="#hidden-content" href="javascript:;") Отправить заявку
+
+      //- Правая часть
+      .head__r
+        //- Контакты на мобильных
+        .head__m
+          img.head__m.menu-btn(src="images/iconmonstr-menu-1.svg", alt="Меню")
+        //- Контакты
+        .cons.cons--m1
+           a.con.con--p1.con--p2(href="tel: 88001001746") 8-800-100-17-46
+           a.con.con--e1.con--e2(href="mailto: Lectorium@synergy.ru") Lectorium@synergy.ru
+           a.con.con--a1.con--a2(href="https://yandex.ru/maps/-/CBBwrFX-DD" target="_blank") Семеновская
+            span Москва, Измайловский Вал, дом 2, корпус 1
+        //- Форма
+        form.form.form--m1(autocomplete="off" method="POST" action="/")
+          p.form__t Записаться 
+            span на практическую лекцию
+          input.form__i(type="text" name="name" maxlength="20" placeholder="Введите ваше имя")
+          input.form__i(type="tel" name="phone" maxlength="20" placeholder="Введите ваш телефон")
+          input.form__i(type="email" name="email" maxlength="20" placeholder="Введите ваш e-mail")
+
+          //- //- Чекбокс online
+          //- label.form__l(for="online") 
+          //-   input.form__sw(type="checkbox" id="online" name="online")
+          //-   span.form__s 1111
+          //-   span.form__s 2222
+
+          //- Чекбокс news
+          label.form__la(for="news") 
+            input.form__ch(type="checkbox" id="news" name="lect" checked="checked")
+            span.form__sp
+            | Согласен получать новости <br> о звездных лекциях и курсах
+
+          //- Сабмит
+          input.button.button--h1(type="submit" name="submit" value="Отправить заявку")
+          .btn__i Количество мест ограничено: 200
+        //- Соц.сети
+        .soc.soc--m1
+          .soc__h Рекомендовать друзьям
+          .soc__w
+            a.soc__v
+            a.soc__f
+            a.soc__g
+            a.soc__t
+            a.soc__o
